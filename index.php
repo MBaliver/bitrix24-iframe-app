@@ -27,18 +27,18 @@ print_r(json_decode($result));
 return;
 
 $bitrix24 = new Bitrix24([
-	// client_id приложения
+	// client_id do aplicativo
 	"CLIENT_ID" => "",
 
-	// client_secret приложения
+	// client_secret do aplicativo
 	"CLIENT_SECRET" => "",
 
 	"PATH" => dirname($_SERVER["PHP_SELF"]),
 
-	// scope приложения
+	// escopo do aplicativo
 	//"SCOPE" => "crm,entity,user,calendar,log,im,disk",
 
-	// протокол, по которому работаем. должен быть https
+	// protocolo utilizado. deve ser https
 	"PROTOCOL" => "https",
 
 	"PORTAL" => "example.bitrix24.ru",
@@ -69,6 +69,8 @@ $getBlogPosts = function ($next = 0) use ($bitrix24) {
 </head>
 <body>
 
+<iframe src="https://dohkotechnology.bitrix24.site/helpdesk/" width="100%" height="600px"></iframe>
+
 <?php foreach ($getBlogPosts()[0] as $post) { ?>
 
 	<div>
@@ -86,3 +88,4 @@ $getBlogPosts = function ($next = 0) use ($bitrix24) {
 <?php } ?>
 
 </body>
+</html>
